@@ -1,16 +1,21 @@
 import './App.css'
+import { useState } from 'react'
 
 function App() {
-  let count = 0
-  const add = () => {
-    count++
-    console.log('count=', count)
-  }
-
+  const [count, setCount] = useState(0)
+  
   return (
     <>
-      <h1>카운터</h1>
-      <button onClick={add}>증가</button>
+      <h1>{count}</h1>
+      <button onClick={ () => {
+        setCount(prev => prev + 1)
+        setCount(prev => prev + 1)
+        setCount(prev => prev + 1)
+        setCount(prev => prev + 1)
+        setCount(prev => prev + 1)
+       } }>
+        증가
+      </button>
     </>
   )
 }
